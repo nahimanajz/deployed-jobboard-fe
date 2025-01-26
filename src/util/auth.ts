@@ -50,6 +50,10 @@ export const authOptions:NextAuthOptions = {
       session.user = jwt.user;  
       return session;
     },
+    async redirect ({url, baseUrl}) {
+      if(url.startsWith(baseUrl)) return url
+      return baseUrl;
+    }
   },
   pages: {
     signIn: "auth/signin",

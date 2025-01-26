@@ -15,7 +15,7 @@ const DropdownUser = () => {
 
   const handleLogout = () => {
     try {
-      signOut();
+      signOut({ callbackUrl:  process.env.NEXTAUTH_URL });
     } catch (error) {
       toast.error("Please contact developer for to fix this issue for you");
     }
