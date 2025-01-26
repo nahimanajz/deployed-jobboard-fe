@@ -16,8 +16,6 @@ const DropdownUser = () => {
   const handleLogout = () => {
     try {
       signOut();
-      localStorage.clear();
-      sessionStorage.clear();
     } catch (error) {
       toast.error("Please contact developer for to fix this issue for you");
     }

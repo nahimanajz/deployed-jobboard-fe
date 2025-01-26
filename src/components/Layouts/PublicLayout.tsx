@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ToastContainer } from "react-toastify";
 import PublicNavBar from "../navs/PublicNav";
 
 type IProps = {
